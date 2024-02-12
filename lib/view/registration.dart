@@ -33,7 +33,7 @@ class RegistrationScreen extends StatelessWidget {
                   margin: const EdgeInsets.symmetric(
                       horizontal: 20.0, vertical: 10.0),
                   decoration: BoxDecoration(
-                    color: Colors.green[600],
+                    color: const Color(0xFF118844),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
@@ -73,7 +73,7 @@ class RegistrationScreen extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),
