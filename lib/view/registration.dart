@@ -3,7 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plantapp/constants/app_theme.dart';
 
-import '../screens/Auth/sign_in_screen.dart';
+import 'sign_up_view.dart';
 import '../widgets/buttons_widget.dart';
 
 class RegistrationScreen extends StatelessWidget {
@@ -35,7 +35,7 @@ class RegistrationScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const SignInScreen(),
+                        builder: (context) => const SignUpScreen(),
                       ),
                     );
                   },

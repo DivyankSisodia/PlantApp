@@ -4,7 +4,7 @@ import 'package:plantapp/screens/onboarding_screen/item_three.dart';
 import 'package:plantapp/screens/onboarding_screen/item_two.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../../view/registration.dart';
+import 'registration.dart';
 
 class OnBoardingPage extends StatefulWidget {
   const OnBoardingPage({super.key});
