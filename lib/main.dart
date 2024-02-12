@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plantapp/screens/onboarding_screen/on_boarding_screen.dart';
 
-import 'view/registration.dart';
+import 'screens/Auth/Sign_in_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const RegistrationScreen(),
+      home: const SignInScreen(),
     );
   }
 }

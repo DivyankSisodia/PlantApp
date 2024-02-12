@@ -3,6 +3,8 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plantapp/constants/app_theme.dart';
 
+import '../screens/Auth/Sign_in_screen.dart';
+
 class RegistrationScreen extends StatelessWidget {
   const RegistrationScreen({super.key});
 
@@ -27,22 +29,32 @@ class RegistrationScreen extends StatelessWidget {
             const Gap(20),
             Column(
               children: [
-                Container(
-                  height: 60,
-                  width: double.infinity,
-                  margin: const EdgeInsets.symmetric(
-                      horizontal: 20.0, vertical: 10.0),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF118844),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Sign In",
-                      style: GoogleFonts.ubuntu(
-                        textStyle: AppTheme.buttontext,
-                        color: Colors.white,
-                        fontSize: 24,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignInScreen(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    height: 60,
+                    width: double.infinity,
+                    margin: const EdgeInsets.symmetric(
+                        horizontal: 20.0, vertical: 10.0),
+                    decoration: BoxDecoration(
+                      color: primaryColor,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Sign In",
+                        style: GoogleFonts.ubuntu(
+                          textStyle: AppTheme.buttontext,
+                          color: Colors.white,
+                          fontSize: 24,
+                        ),
                       ),
                     ),
                   ),
@@ -66,7 +78,7 @@ class RegistrationScreen extends StatelessWidget {
                       "Create an Account",
                       style: GoogleFonts.ubuntu(
                         textStyle: AppTheme.buttontext,
-                        color: Colors.green[600],
+                        color: primaryColor,
                         fontSize: 24,
                       ),
                     ),
