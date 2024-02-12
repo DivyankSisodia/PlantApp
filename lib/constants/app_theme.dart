@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 const primaryColor = Color.fromARGB(255, 21, 166, 84);
+const secondaryColor = Color.fromARGB(255, 20, 146, 75);
 const backgroundColor = Color(0xFFE5E5E5);
 const textColor = Color(0xFF34A853);
-const smallTextColor = Color(0xFF5F6160);
+const smallTextColor = Color.fromARGB(255, 96, 94, 94);
 const headingColor = Color(0xFF000000);
 const categoryColor = Color(0xFF60E275);
+const textFieldColor = Color.fromARGB(255, 115, 182, 133);
 
 class AppTheme {
   static const TextStyle display1 = TextStyle(
@@ -41,16 +43,16 @@ class AppTheme {
   static const TextStyle signUpTitle = TextStyle(
     fontWeight: FontWeight.w800,
     fontSize: 30,
-    color: primaryColor,
+    color: secondaryColor,
   );
   static const TextStyle smallTextTitle = TextStyle(
     fontWeight: FontWeight.w800,
-    fontSize: 16,
+    fontSize: 15,
     color: smallTextColor,
   );
   static const TextStyle smallTextMisc = TextStyle(
-    fontWeight: FontWeight.w800,
+    fontWeight: FontWeight.w300,
     fontSize: 14,
-    color: smallTextColor,
+    color: headingColor,
   );
 }

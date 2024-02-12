@@ -3,7 +3,8 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plantapp/constants/app_theme.dart';
 
-import '../screens/Auth/Sign_in_screen.dart';
+import '../screens/Auth/sign_in_screen.dart';
+import '../widgets/buttons_widget.dart';
 
 class RegistrationScreen extends StatelessWidget {
   const RegistrationScreen({super.key});
@@ -38,51 +39,19 @@ class RegistrationScreen extends StatelessWidget {
                       ),
                     );
                   },
-                  child: Container(
-                    height: 60,
-                    width: double.infinity,
-                    margin: const EdgeInsets.symmetric(
-                        horizontal: 20.0, vertical: 10.0),
-                    decoration: BoxDecoration(
-                      color: primaryColor,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Center(
-                      child: Text(
-                        "Sign In",
-                        style: GoogleFonts.ubuntu(
-                          textStyle: AppTheme.buttontext,
-                          color: Colors.white,
-                          fontSize: 24,
-                        ),
-                      ),
-                    ),
+                  child: const ButtonsWidget(
+                    buttonColor: primaryColor,
+                    title: 'Sign In',
+                    borderColor: primaryColor,
+                    textColor: Colors.white,
                   ),
                 ),
                 const Gap(12),
-                Container(
-                  height: 60,
-                  width: double.infinity,
-                  margin: const EdgeInsets.symmetric(
-                      horizontal: 20.0, vertical: 10.0),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(
-                      color: Colors.green,
-                      width: 2,
-                    ),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Create an Account",
-                      style: GoogleFonts.ubuntu(
-                        textStyle: AppTheme.buttontext,
-                        color: primaryColor,
-                        fontSize: 24,
-                      ),
-                    ),
-                  ),
+                const ButtonsWidget(
+                  buttonColor: Colors.white,
+                  title: 'Create An Account',
+                  borderColor: primaryColor,
+                  textColor: primaryColor,
                 ),
               ],
             ),
