@@ -64,6 +64,7 @@ class SignUpScreen extends StatelessWidget {
               ],
             ),
             const ButtonsWidget(
+              textsize: 24,
               btnheight: 50,
               title: 'Sign Up',
               borderColor: primaryColor,

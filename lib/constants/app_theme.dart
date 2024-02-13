@@ -34,7 +34,7 @@ class AppTheme {
   static const TextStyle buttontext = TextStyle(
     fontWeight: FontWeight.w400,
     fontSize: 20,
-    color: backgroundColor,
+    color: Colors.white,
   );
   static const TextStyle buttontext2 = TextStyle(
     fontWeight: FontWeight.w800,
@@ -52,8 +52,12 @@ class AppTheme {
     color: smallTextColor,
   );
   static const TextStyle smallTextMisc = TextStyle(
-    fontWeight: FontWeight.w300,
     fontSize: 14,
     color: headingColor,
+  );
+  static TextStyle others = TextStyle(
+    fontWeight: FontWeight.w200,
+    fontSize: 14,
+    color: secondaryColor.withGreen(100),
   );
 }

@@ -9,7 +9,8 @@ class ButtonsWidget extends StatelessWidget {
     required this.title,
     required this.borderColor,
     required this.textColor,
-    required this.buttonColor, this.btnheight,
+    required this.buttonColor,
+    this.btnheight, required this.textsize,
   });
 
   final String title;
@@ -17,6 +18,7 @@ class ButtonsWidget extends StatelessWidget {
   final Color textColor;
   final Color buttonColor;
   final double? btnheight;
+  final double textsize;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +40,7 @@ class ButtonsWidget extends StatelessWidget {
           style: GoogleFonts.ubuntu(
             textStyle: AppTheme.buttontext,
             color: textColor,
-            fontSize: 24,
+            fontSize: textsize,
           ),
         ),
       ),

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 import '../../data/plant_data.dart';
+import '../../view/detail_page_view.dart';
 import '../../widgets/plant_card_widget.dart';
 
 class HomePlantGrid extends StatelessWidget {
@@ -34,10 +35,24 @@ class HomePlantGrid extends StatelessWidget {
             ),
           ],
         ),
-        child: PlantCardWidget(
-          img: plantList[index].imagePath,
-          title: plantList[index].title,
-          price: plantList[index].price,
+        child: GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => DetailPage(
+                  imagePath: plantList[index].imagePath,
+                  title: plantList[index].title,
+                  price: plantList[index].price,
+                ),
+              ),
+            );
+          },
+          child: PlantCardWidget(
+            img: plantList[index].imagePath,
+            title: plantList[index].title,
+            price: plantList[index].price,
+          ),
         ),
       ),
       shrinkWrap: true, // Add this line

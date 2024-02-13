@@ -72,6 +72,7 @@ class LogInScreen extends StatelessWidget {
                 );
               },
               child: const ButtonsWidget(
+                textsize: 24,
                 btnheight: 60,
                 title: 'Log In',
                 borderColor: primaryColor,
