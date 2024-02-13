@@ -7,7 +7,8 @@ class BottomText extends StatelessWidget {
   const BottomText({
     super.key,
     required this.firstText,
-    required this.secondText, required this.textBtnPressed,
+    required this.secondText,
+    required this.textBtnPressed,
   });
 
   final String firstText;

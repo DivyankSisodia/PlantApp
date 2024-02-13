@@ -14,7 +14,7 @@ class OnBoardingPage extends StatefulWidget {
 }
 
 class _OnBoardingPageState extends State<OnBoardingPage> {
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
 
   bool isLastPage = false;
   @override

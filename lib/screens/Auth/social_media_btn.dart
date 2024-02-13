@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 
 class SocialMediaBtn extends StatelessWidget {
   const SocialMediaBtn({
-    super.key, this.btnheight, this.btnwidth, required this.image,
+    super.key,
+    this.btnheight,
+    this.btnwidth,
+    required this.image,
   });
 
   final double? btnheight;

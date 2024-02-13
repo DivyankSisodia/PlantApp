@@ -3,12 +3,11 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:plantapp/constants/app_theme.dart';
-import 'package:plantapp/screens/Auth/common/bottom_text.dart';
-import 'package:plantapp/screens/Auth/common/heading.dart';
 import 'package:plantapp/widgets/buttons_widget.dart';
-
+import '../screens/Auth/bottom_text.dart';
+import '../screens/Auth/heading.dart';
+import '../screens/Auth/social_media_btn.dart';
 import 'sign_in_view.dart';
-import '../screens/Auth/common/Social_media_btn.dart';
 import '../widgets/clipped_image.dart';
 import '../widgets/text_field.dart';
 

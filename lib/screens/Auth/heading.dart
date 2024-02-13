@@ -5,7 +5,9 @@ import '../../../constants/app_theme.dart';
 
 class RegistrationHeading extends StatelessWidget {
   const RegistrationHeading({
-    super.key, required this.title, required this.subTitle,
+    super.key,
+    required this.title,
+    required this.subTitle,
   });
 
   final String title;

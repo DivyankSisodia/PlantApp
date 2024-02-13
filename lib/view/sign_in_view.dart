@@ -3,11 +3,10 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:plantapp/constants/app_theme.dart';
-import 'package:plantapp/screens/Auth/common/bottom_text.dart';
-import 'package:plantapp/screens/Auth/common/heading.dart';
 import 'package:plantapp/widgets/buttons_widget.dart';
 import 'package:plantapp/widgets/clipped_image.dart';
-
+import '../screens/Auth/bottom_text.dart';
+import '../screens/Auth/heading.dart';
 import '../widgets/text_field.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -31,7 +30,7 @@ class SignInScreen extends StatelessWidget {
               title: "Testemail@gmail.com",
               icon: Icons.mail,
             ),
-            Gap(15),
+            const Gap(15),
             const TextFieldWidget(
               title: "Password",
               icon: Iconsax.password_check,
