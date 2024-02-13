@@ -40,7 +40,7 @@ class BottomText extends StatelessWidget {
                   textStyle: AppTheme.smallTextMisc,
                   fontWeight: FontWeight.w400,
                   fontSize: 14,
-                  color: primaryColor,
+                  color: secondaryColor,
                 ),
               ),
             ),

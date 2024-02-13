@@ -3,14 +3,16 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:plantapp/constants/app_theme.dart';
+import 'package:plantapp/screens/Home/home_page.dart';
+import 'package:plantapp/view/sign_up_view.dart';
 import 'package:plantapp/widgets/buttons_widget.dart';
 import 'package:plantapp/widgets/clipped_image.dart';
 import '../screens/Auth/bottom_text.dart';
 import '../screens/Auth/heading.dart';
 import '../widgets/text_field.dart';
 
-class SignInScreen extends StatelessWidget {
-  const SignInScreen({super.key});
+class LogInScreen extends StatelessWidget {
+  const LogInScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -60,18 +62,35 @@ class SignInScreen extends StatelessWidget {
               ],
             ),
             const Gap(20),
-            const ButtonsWidget(
-              btnheight: 60,
-              title: 'Log In',
-              borderColor: primaryColor,
-              textColor: Colors.white,
-              buttonColor: primaryColor,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AppHomePage(),
+                  ),
+                );
+              },
+              child: const ButtonsWidget(
+                btnheight: 60,
+                title: 'Log In',
+                borderColor: primaryColor,
+                textColor: Colors.white,
+                buttonColor: primaryColor,
+              ),
             ),
             const Gap(80),
             BottomText(
               firstText: 'Already have an account?',
               secondText: 'Sign In',
-              textBtnPressed: () {},
+              textBtnPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SignUpScreen(),
+                  ),
+                );
+              },
             )
           ],
         ),

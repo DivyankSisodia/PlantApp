@@ -7,7 +7,8 @@ const textColor = Color(0xFF34A853);
 const smallTextColor = Color.fromARGB(255, 96, 94, 94);
 const headingColor = Color(0xFF000000);
 const categoryColor = Color(0xFF60E275);
-const textFieldColor = Color.fromARGB(255, 115, 182, 133);
+const categoryTextColor = Color(0xFFE1E3E1);
+const textFieldColor = Color.fromARGB(255, 206, 249, 222);
 
 class AppTheme {
   static const TextStyle display1 = TextStyle(
@@ -26,7 +27,7 @@ class AppTheme {
     color: headingColor,
   );
   static const TextStyle displayCustom = TextStyle(
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w700,
     fontSize: 36,
     color: headingColor,
   );

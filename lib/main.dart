@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'screens/Home/home_page.dart';
 import 'view/sign_up_view.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const SignUpScreen(),
+      home: const AppHomePage(),
     );
   }
 }
