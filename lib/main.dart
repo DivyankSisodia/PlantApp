@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'screens/Home/home_page.dart';
-import 'view/sign_up_view.dart';
+import 'view/detail_page_view.dart';
+import 'view/home_page_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const AppHomePage(),
+      home: const DetailPage(),
     );
   }
 }

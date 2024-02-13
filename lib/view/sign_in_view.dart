@@ -3,7 +3,7 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:plantapp/constants/app_theme.dart';
-import 'package:plantapp/screens/Home/home_page.dart';
+import 'package:plantapp/view/home_page_view.dart';
 import 'package:plantapp/view/sign_up_view.dart';
 import 'package:plantapp/widgets/buttons_widget.dart';
 import 'package:plantapp/widgets/clipped_image.dart';

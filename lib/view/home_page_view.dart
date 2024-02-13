@@ -6,7 +6,7 @@ import 'package:plantapp/screens/Home/Chip_Widget.dart';
 import 'package:plantapp/screens/Home/Plant_Card.dart';
 import 'package:plantapp/screens/Home/home_header.dart';
 import 'package:plantapp/screens/Home/search_widget.dart';
-import '../../bottom_nav_bar.dart';
+import '../bottom_nav_bar.dart';
 
 class AppHomePage extends StatelessWidget {
   const AppHomePage({super.key});
