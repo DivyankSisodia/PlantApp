@@ -83,7 +83,7 @@ class LogInScreen extends StatelessWidget {
             const Gap(80),
             BottomText(
               firstText: 'Already have an account?',
-              secondText: 'Sign In',
+              secondText: 'Log In',
               textBtnPressed: () {
                 Navigator.push(
                   context,

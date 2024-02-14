@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plantapp/constants/app_theme.dart';
+import 'package:plantapp/view/sign_in_view.dart';
 
 import 'sign_up_view.dart';
 import '../widgets/buttons_widget.dart';
@@ -35,7 +36,7 @@ class RegistrationScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const SignUpScreen(),
+                        builder: (context) => const LogInScreen(),
                       ),
                     );
                   },
@@ -48,12 +49,22 @@ class RegistrationScreen extends StatelessWidget {
                   ),
                 ),
                 const Gap(12),
-                const ButtonsWidget(
-                  buttonColor: Colors.white,
-                  title: 'Create An Account',
-                  borderColor: primaryColor,
-                  textColor: primaryColor,
-                  textsize: 24,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignUpScreen(),
+                      ),
+                    );
+                  },
+                  child: const ButtonsWidget(
+                    buttonColor: Colors.white,
+                    title: 'Create An Account',
+                    borderColor: primaryColor,
+                    textColor: primaryColor,
+                    textsize: 24,
+                  ),
                 ),
               ],
             ),
