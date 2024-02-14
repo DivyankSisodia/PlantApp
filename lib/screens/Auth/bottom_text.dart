@@ -39,7 +39,7 @@ class BottomText extends StatelessWidget {
                 style: GoogleFonts.ubuntu(
                   textStyle: AppTheme.smallTextMisc,
                   fontWeight: FontWeight.w400,
-                  fontSize: 14,
+                  fontSize: 15,
                   color: secondaryColor,
                 ),
               ),

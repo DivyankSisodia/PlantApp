@@ -1,10 +1,15 @@
+// ignore_for_file: use_build_context_synchronously
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:plantapp/constants/app_theme.dart';
+import 'package:plantapp/view/home_page_view.dart';
 import 'package:plantapp/widgets/buttons_widget.dart';
 import '../screens/Auth/bottom_text.dart';
+import '../screens/Auth/forgot_pass/forgot_password.dart';
 import '../screens/Auth/heading.dart';
 import '../screens/Auth/social_media_btn.dart';
 import 'sign_in_view.dart';
@@ -26,6 +31,49 @@ class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController passwordController = TextEditingController();
   TextEditingController fullNameController = TextEditingController();
   final _key = GlobalKey<FormState>();
+
+  registration() async {
+    if (password != null &&
+        emailController.text != "" &&
+        fullNameController.text != "null") {
+      try {
+        UserCredential usercredential = await FirebaseAuth.instance
+            .createUserWithEmailAndPassword(email: email, password: password);
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Registration Successful'),
+          ),
+        );
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const AppHomePage(),
+          ),
+        );
+      } on FirebaseAuthException catch (e) {
+        if (e.code == 'weak-password') {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('The password provided is too weak.'),
+            ),
+          );
+        } else if (e.code == 'email-already-in-use') {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('The account already exists for that email.'),
+            ),
+          );
+        }
+      } catch (e) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('An error occurred'),
+          ),
+        );
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,7 +121,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ForgotPassScreen(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'Forgot Password?',
                     style: GoogleFonts.ubuntu(
@@ -85,13 +140,25 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ],
             ),
-            const ButtonsWidget(
-              textsize: 24,
-              btnheight: 50,
-              title: 'Sign Up',
-              borderColor: primaryColor,
-              textColor: Colors.white,
-              buttonColor: primaryColor,
+            GestureDetector(
+              onTap: () {
+                if (_key.currentState!.validate()) {
+                  setState(() {
+                    email = emailController.text;
+                    password = passwordController.text;
+                    fullName = fullNameController.text;
+                  });
+                }
+                registration();
+              },
+              child: const ButtonsWidget(
+                textsize: 24,
+                btnheight: 50,
+                title: 'Sign Up',
+                borderColor: primaryColor,
+                textColor: Colors.white,
+                buttonColor: primaryColor,
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
