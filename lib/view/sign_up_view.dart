@@ -6,6 +6,7 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:plantapp/constants/app_theme.dart';
+import 'package:plantapp/services/auth.dart';
 import 'package:plantapp/view/home_page_view.dart';
 import 'package:plantapp/widgets/buttons_widget.dart';
 import '../screens/Auth/bottom_text.dart';
@@ -186,14 +187,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
               ],
             ),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SocialMediaBtn(
-                  image: 'assets/images/7123025_logo_google_g_icon.png',
-                  btnheight: 40,
-                  btnwidth: 40,
+                GestureDetector(
+                  onTap: () {
+                    AuthMethods().signInWithGoogle(context);
+                  },
+                  child: const SocialMediaBtn(
+                    image: 'assets/images/7123025_logo_google_g_icon.png',
+                    btnheight: 40,
+                    btnwidth: 40,
+                  ),
                 ),
                 SocialMediaBtn(
                     image:

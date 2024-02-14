@@ -1,6 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:plantapp/services/data_base.dart';
+
+import '../view/home_page_view.dart';
 
 class AuthMethods {
   final FirebaseAuth auth = FirebaseAuth.instance;
@@ -24,17 +27,28 @@ class AuthMethods {
       accessToken: googleSignInAuthentication?.accessToken,
     );
 
-    UserCredential result = await _firebaseauth.signInWithCredential(credential);
+    UserCredential result =
+        await _firebaseauth.signInWithCredential(credential);
 
     User? userDetails = result.user;
 
-    if(result!=null){
+    if (result != null) {
       Map<String, dynamic> userInfoMap = {
         "email": userDetails!.email,
         "username": userDetails.displayName,
         "profilePic": userDetails.photoURL,
         "id": userDetails.uid,
       };
+      await DataBaseMethods()
+          .addUser(userDetails.uid, userInfoMap)
+          .then((value) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const AppHomePage(),
+          ),
+        );
+      });
     }
   }
 }
