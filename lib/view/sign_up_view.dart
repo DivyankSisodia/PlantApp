@@ -11,9 +11,21 @@ import 'sign_in_view.dart';
 import '../widgets/clipped_image.dart';
 import '../widgets/text_field.dart';
 
-class SignUpScreen extends StatelessWidget {
+class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
 
+  @override
+  State<SignUpScreen> createState() => _SignUpScreenState();
+}
+
+class _SignUpScreenState extends State<SignUpScreen> {
+  String email = '';
+  String password = '';
+  String fullName = '';
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController fullNameController = TextEditingController();
+  final _key = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,17 +39,27 @@ class SignUpScreen extends StatelessWidget {
               subTitle: 'Create your new account',
             ),
             const Gap(10),
-            const TextFieldWidget(
-              title: "Full Name",
-              icon: Icons.person,
-            ),
-            const TextFieldWidget(
-              title: "Testemail@gmail.com",
-              icon: Icons.mail,
-            ),
-            const TextFieldWidget(
-              title: "Password",
-              icon: Iconsax.password_check,
+            Form(
+              key: _key,
+              child: Column(
+                children: [
+                  TextFieldWidget(
+                    controller: fullNameController,
+                    title: "Full Name",
+                    icon: Icons.person,
+                  ),
+                  TextFieldWidget(
+                    controller: emailController,
+                    title: "Testemail@gmail.com",
+                    icon: Icons.mail,
+                  ),
+                  TextFieldWidget(
+                    controller: passwordController,
+                    title: "Password",
+                    icon: Iconsax.password_check,
+                  ),
+                ],
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

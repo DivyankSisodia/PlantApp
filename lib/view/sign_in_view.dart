@@ -11,8 +11,19 @@ import '../screens/Auth/bottom_text.dart';
 import '../screens/Auth/heading.dart';
 import '../widgets/text_field.dart';
 
-class LogInScreen extends StatelessWidget {
+class LogInScreen extends StatefulWidget {
   const LogInScreen({super.key});
+
+  @override
+  State<LogInScreen> createState() => _LogInScreenState();
+}
+
+class _LogInScreenState extends State<LogInScreen> {
+
+  String email = '';
+  String password = '';
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -28,12 +39,14 @@ class LogInScreen extends StatelessWidget {
               subTitle: 'Log in to your account',
             ),
             const Gap(20),
-            const TextFieldWidget(
+            TextFieldWidget(
+              controller: emailController,
               title: "Testemail@gmail.com",
               icon: Icons.mail,
             ),
             const Gap(15),
-            const TextFieldWidget(
+            TextFieldWidget(
+              controller: passwordController,
               title: "Password",
               icon: Iconsax.password_check,
             ),
