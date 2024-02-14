@@ -6,7 +6,10 @@ import '../constants/app_theme.dart';
 
 class PlantCardWidget extends StatelessWidget {
   const PlantCardWidget({
-    super.key, required this.img, required this.title, required this.price,
+    super.key,
+    required this.img,
+    required this.title,
+    required this.price,
   });
 
   final String img;
@@ -37,10 +40,11 @@ class PlantCardWidget extends StatelessWidget {
                 Text(
                   title,
                   style: GoogleFonts.ubuntu(
-                      textStyle: AppTheme.smallTextMisc,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.black,
-                      fontSize: 12),
+                    textStyle: AppTheme.smallTextMisc,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.black,
+                    fontSize: 12,
+                  ),
                 ),
                 const Gap(5),
                 Text(

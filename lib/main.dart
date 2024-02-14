@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:plantapp/firebase_options.dart';
+import 'package:plantapp/view/home_page_view.dart';
 import 'package:plantapp/view/on_boarding_screen.dart';
 
 void main() async {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const OnBoardingPage(),
+      home: const AppHomePage(),
     );
   }
 }

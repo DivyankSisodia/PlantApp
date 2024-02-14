@@ -201,15 +201,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     btnwidth: 40,
                   ),
                 ),
-                SocialMediaBtn(
+                const SocialMediaBtn(
                     image:
                         'assets/images/5296499_fb_facebook_facebook logo_icon.png',
                     btnheight: 28,
                     btnwidth: 28),
-                SocialMediaBtn(
-                  image: 'assets/images/104490_apple_icon.png',
-                  btnheight: 32,
-                  btnwidth: 32,
+                GestureDetector(
+                  onTap: () {
+                    AuthMethods().signInWithApple();
+                  },
+                  child: const SocialMediaBtn(
+                    image: 'assets/images/104490_apple_icon.png',
+                    btnheight: 32,
+                    btnwidth: 32,
+                  ),
                 ),
               ],
             ),
