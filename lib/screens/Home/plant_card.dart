@@ -1,6 +1,5 @@
 // ignore_for_file: file_names
 
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
@@ -21,7 +20,7 @@ class HomePlantGrid extends StatelessWidget {
       ),
       itemCount: 4, // Provide the number of items
       itemBuilder: (context, index) => Container(
-        height: 190,
+        height: 220,
         width: 200,
         margin: const EdgeInsets.all(8),
         decoration: BoxDecoration(
@@ -61,5 +60,3 @@ class HomePlantGrid extends StatelessWidget {
     );
   }
 }
-
-

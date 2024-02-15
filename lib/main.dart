@@ -4,6 +4,9 @@ import 'package:plantapp/firebase_options.dart';
 import 'package:plantapp/view/home_page_view.dart';
 import 'package:plantapp/view/on_boarding_screen.dart';
 
+import 'screens/Auth/phone_auth/otp_screen.dart';
+import 'screens/Auth/phone_auth/phone_authentication.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -25,7 +28,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const AppHomePage(),
+      home: OTPScreen(
+        verificationId: '',
+      ),
     );
   }
 }

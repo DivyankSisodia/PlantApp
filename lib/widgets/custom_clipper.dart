@@ -18,3 +18,4 @@ class CustomClip extends CustomClipper<Path> {
     return true;
   }
 }
+
