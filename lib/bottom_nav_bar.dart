@@ -1,20 +1,48 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:plantapp/src/view/cart_view.dart';
+import 'package:plantapp/src/view/favourite_view.dart';
+import 'package:plantapp/src/view/home_page_view.dart';
 import 'src/constants/app_theme.dart';
+import 'src/view/Profile_screen.dart';
 
-class CustombottomNavBar extends StatelessWidget {
+final currentIndexProvider = StateProvider<int>((ref) {
+  return 0;
+});
+
+class CustombottomNavBar extends ConsumerWidget {
   const CustombottomNavBar({
     super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final currentIndex = ref.watch(currentIndexProvider);
     return BottomNavigationBar(
-      currentIndex: 0,
+      currentIndex: currentIndex,
       selectedItemColor: primaryColor,
       unselectedItemColor: headingColor,
       elevation: 0,
+      onTap: (value) {
+        ref.read(currentIndexProvider.notifier).update((state) => value);
+        if (value == 0) {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (_) => const AppHomePage()));
+        }
+        if (value == 1) {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (_) => const CartView()));
+        }
+        if (value == 2) {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (_) => const FavouriteScreen()));
+        }
+        if (value == 3) {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (_) => const ProfileScreen()));
+        }
+      },
       type: BottomNavigationBarType.fixed,
       items: const [
         BottomNavigationBarItem(

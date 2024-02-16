@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:plantapp/screens/Home/Chip_Widget.dart';
-import 'package:plantapp/screens/Home/Plant_Card.dart';
-import 'package:plantapp/src/screens/Home/home_header.dart';
-import 'package:plantapp/src/screens/Home/search_widget.dart';
+
 import '../../bottom_nav_bar.dart';
+import '../screens/Home/Chip_Widget.dart';
+import '../screens/Home/Plant_Card.dart';
 import '../constants/app_theme.dart';
+import '../screens/Home/home_header.dart';
+import '../screens/Home/search_widget.dart';
 
 class AppHomePage extends StatelessWidget {
   const AppHomePage({super.key});
@@ -65,7 +66,7 @@ class AppHomePage extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children:  [
+            children: [
               HomeHeader(),
               Gap(15),
               SearchWidget(),
@@ -79,11 +80,3 @@ class AppHomePage extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-

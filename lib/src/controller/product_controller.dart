@@ -15,3 +15,8 @@ class ProductNotifier extends StateNotifier<List<PlantData>> {
     ];
   }
 }
+
+final productNotifierProvider =
+    StateNotifierProvider<ProductNotifier, List<PlantData>>((ref) {
+  return ProductNotifier();
+});

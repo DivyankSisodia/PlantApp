@@ -9,7 +9,6 @@ import '../../data/plant_data.dart';
 import '../../view/detail_page_view.dart';
 import '../../widgets/plant_card_widget.dart';
 
-
 class HomePlantGrid extends ConsumerWidget {
   const HomePlantGrid({
     super.key,
@@ -52,9 +51,7 @@ class HomePlantGrid extends ConsumerWidget {
             );
           },
           child: PlantCardWidget(
-            img: plantList[index].imagePath,
-            title: plantList[index].title,
-            price: plantList[index].price,
+            plantIndex: index,
           ),
         ),
       ),
