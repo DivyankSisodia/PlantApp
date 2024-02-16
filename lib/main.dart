@@ -1,18 +1,16 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:plantapp/firebase_options.dart';
-import 'package:plantapp/view/home_page_view.dart';
-import 'package:plantapp/view/on_boarding_screen.dart';
-
-import 'screens/Auth/phone_auth/otp_screen.dart';
-import 'screens/Auth/phone_auth/phone_authentication.dart';
+import 'package:plantapp/src/view/home_page_view.dart';
+import 'package:plantapp/src/view/on_boarding_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  runApp(const ProviderScope(child:  MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -28,9 +26,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: OTPScreen(
-        verificationId: '',
-      ),
+      home: const AppHomePage(),
     );
   }
 }

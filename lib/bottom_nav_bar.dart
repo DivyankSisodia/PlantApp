@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:plantapp/constants/app_theme.dart';
+
+import 'src/constants/app_theme.dart';
 
 class CustombottomNavBar extends StatelessWidget {
   const CustombottomNavBar({

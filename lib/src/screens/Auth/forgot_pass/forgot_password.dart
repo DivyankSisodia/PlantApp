@@ -1,10 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:plantapp/constants/app_theme.dart';
-import 'package:plantapp/widgets/buttons_widget.dart';
 
+import '../../../constants/app_theme.dart';
 import '../../../view/sign_up_view.dart';
+import '../../../widgets/buttons_widget.dart';
 import '../../../widgets/custom_clipper.dart';
 import '../bottom_text.dart';
 

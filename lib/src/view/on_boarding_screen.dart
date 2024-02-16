@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:plantapp/screens/onboarding_screen/item_one.dart';
-import 'package:plantapp/screens/onboarding_screen/item_three.dart';
-import 'package:plantapp/screens/onboarding_screen/item_two.dart';
+import 'package:plantapp/src/screens/onboarding_screen/item_one.dart';
+import 'package:plantapp/src/screens/onboarding_screen/item_three.dart';
+import 'package:plantapp/src/screens/onboarding_screen/item_two.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import 'registration.dart';

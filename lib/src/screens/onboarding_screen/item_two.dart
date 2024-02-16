@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:plantapp/constants/app_theme.dart';
+
+import '../../constants/app_theme.dart';
 
 class SecondScreen extends StatelessWidget {
   const SecondScreen({super.key});

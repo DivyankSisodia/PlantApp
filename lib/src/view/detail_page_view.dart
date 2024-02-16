@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:plantapp/constants/app_theme.dart';
-import 'package:plantapp/widgets/buttons_widget.dart';
+import '../constants/app_theme.dart';
+import '../widgets/buttons_widget.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage(

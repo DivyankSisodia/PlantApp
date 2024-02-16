@@ -5,17 +5,17 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:plantapp/constants/app_theme.dart';
-import 'package:plantapp/services/auth.dart';
-import 'package:plantapp/view/home_page_view.dart';
-import 'package:plantapp/widgets/buttons_widget.dart';
+import 'package:plantapp/src/services/auth.dart';
+import 'package:plantapp/src/view/home_page_view.dart';
+import '../constants/app_theme.dart';
 import '../screens/Auth/bottom_text.dart';
 import '../screens/Auth/forgot_pass/forgot_password.dart';
 import '../screens/Auth/heading.dart';
 import '../screens/Auth/social_media_btn.dart';
-import 'sign_in_view.dart';
+import '../widgets/buttons_widget.dart';
 import '../widgets/clipped_image.dart';
 import '../widgets/text_field.dart';
+import 'sign_in_view.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -34,8 +34,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final _key = GlobalKey<FormState>();
 
   registration() async {
-    if (password != null &&
-        emailController.text != "" &&
+    if (emailController.text != "" &&
         fullNameController.text != "null") {
       try {
         UserCredential usercredential = await FirebaseAuth.instance

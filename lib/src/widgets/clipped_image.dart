@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:plantapp/widgets/custom_clipper.dart';
+import 'package:plantapp/src/widgets/custom_clipper.dart';
 
 class ClippedImage extends StatelessWidget {
   const ClippedImage({

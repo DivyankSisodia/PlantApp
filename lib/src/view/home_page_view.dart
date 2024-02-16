@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:plantapp/constants/app_theme.dart';
 import 'package:plantapp/screens/Home/Chip_Widget.dart';
 import 'package:plantapp/screens/Home/Plant_Card.dart';
-import 'package:plantapp/screens/Home/home_header.dart';
-import 'package:plantapp/screens/Home/search_widget.dart';
-import '../bottom_nav_bar.dart';
+import 'package:plantapp/src/screens/Home/home_header.dart';
+import 'package:plantapp/src/screens/Home/search_widget.dart';
+import '../../bottom_nav_bar.dart';
+import '../constants/app_theme.dart';
 
 class AppHomePage extends StatelessWidget {
   const AppHomePage({super.key});

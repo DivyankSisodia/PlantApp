@@ -3,7 +3,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:plantapp/services/data_base.dart';
+import 'package:plantapp/src/services/data_base.dart';
 import 'package:the_apple_sign_in/the_apple_sign_in.dart';
 
 import '../view/home_page_view.dart';
